@@ -1,0 +1,13 @@
+<ul *ngIf="loaded">
+  <h4>Photos</h4>
+  <button (click)="goBack()">Go Back</button>
+  <li *ngFor="let photos of photos">
+    <a [routerLink]="['/albums/{{albumId}}/photos', photos.albumId]"><p>AlbumId: {{photos.albumId}}</p></a>
+    <a [routerLink]="['/albums/{{id}}/photos', photos.id]"><p>Id: {{photos.id}}</p></a>
+    <a [routerLink]="['/albums/{{title}}/photos', photos.title]"><p>Title: {{photos.title}}</p></a>
+    <a [routerLink]="['/albums/{{url}}/photos', photos.url]"><img src="{{photos.url}}" alt=""></a><br>
+    <a [routerLink]="['/albums/{{thumbnailUrl}}/photos', photos.thumbnailUrl]"><img src="{{photos.thumbnailUrl}}" alt=""></a>
+  </li>
+</ul>
+
+<p *ngIf="!loaded">Loading photos...</p>

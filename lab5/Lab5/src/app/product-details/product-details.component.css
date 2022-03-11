@@ -1,0 +1,14 @@
+#details_head{
+  margin-left: 600px;
+  font-size: 30px;
+}
+.details_index{
+  margin: 0 300px 0 300px;
+}
+#details_name{
+  text-align: center;
+  font-size: 20px;
+}
+.details_image{
+  margin-left: 290px
+}

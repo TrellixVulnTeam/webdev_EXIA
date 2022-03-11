@@ -1,0 +1,18 @@
+<h2 class = "head_category">Categories</h2>
+<div *ngFor="let category of categories">
+
+  <fieldset class = "category_list">
+    <div class = "categories_link">
+        <a [title]="category.name + ' details'" [routerLink]="['/categories', category.id]">
+          <h3 class = "categories_name">
+            {{ category.name }}
+          </h3>
+        </a>
+    </div>
+    <div class = "category_image">
+      <a [title]="category.name + ' details'" [routerLink]="['/categories', category.id]">
+        <img *ngIf="category.image" src ="{{ category.image }}" width="400px">
+      </a>
+    </div>
+  </fieldset>
+</div>

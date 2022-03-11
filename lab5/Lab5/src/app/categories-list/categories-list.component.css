@@ -1,0 +1,19 @@
+.head_category{
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 615px;
+}
+.category_list{
+  margin-left: 360px;
+  padding: 0 200px 0 200px;
+}
+.categories_name{
+  font-size: 30px;
+  text-align: center;
+  color: #2374c4;
+  font-weight: normal;
+}
+.categories_name a:hover{
+  color: #307bc4;
+}
+

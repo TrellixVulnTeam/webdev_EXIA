@@ -1,0 +1,21 @@
+<h2 id = "details_head">Product Details</h2>
+<fieldset class = "details_index">
+  <div *ngIf="product">
+    <a href="{{ product.link }}">
+      <h3 id = "details_name">
+        {{ product.name }}
+      </h3>
+    </a>
+
+    <a href="{{ product.link }}"><img class = "details_image" src="{{ product.image }}" width="300px"></a>
+    <h4>Price: {{ product.price | currency }}</h4>
+    <h4>Rating: {{ product.rating }}</h4>
+    <p>Description: {{ product.description }}</p>
+    <div *ngIf="product">
+      <h3>{{ product.name }}</h3>
+      <h4>{{ product.price | currency }}</h4>
+      <p>{{ product.description }}</p>
+      <button type="button" (click)="addToCart(product)">Buy</button>
+    </div>
+  </div>
+</fieldset>

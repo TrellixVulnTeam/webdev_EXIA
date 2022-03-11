@@ -1,0 +1,51 @@
+<div *ngFor="let product of products">
+
+  <div *ngIf="product.category_id == categoryId && product.show">
+    <h3 id = "product_head">
+      <a [title]="product.name + ' details'" href="{{ product.link }}" [routerLink]="['/products', product.id]">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <a [title]="product.name + ' details'" href="{{ product.link }}" [routerLink]="['/products', product.id]">
+      <img id = "product_image" src="{{ product.image }}" width="300px"[routerLink]="['/products', product.id]"/>
+    </a>
+
+    <p *ngIf="product.description" >
+      Description: {{ product.description }}
+    </p>
+
+    <p *ngIf="product.rating" >
+      Rating: {{ product.rating }}
+    </p>
+
+    <p *ngIf="product.price">
+      Price: {{ product.price }}$
+    </p>
+
+    <span id="Butt">
+      <p>
+        <button type="button" (click)="like(product)">
+          Like
+        </button> {{ product.like }}
+      </p>
+
+      <button type="button" (click)="remove(product)">
+        Remove
+      </button>
+
+      <app-product-alerts
+        [product]="product"
+        (notify)="onNotify()">
+      </app-product-alerts>
+
+
+      <a [href] = "'https://telegram.me/share/url?url=' + product.link " target="_blank">
+        <button type="button" (click)="share()">
+          Share
+        </button>
+      </a>
+
+    </span>
+  </div>
+</div>
