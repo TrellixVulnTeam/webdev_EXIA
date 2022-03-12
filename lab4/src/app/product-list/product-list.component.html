@@ -1,0 +1,19 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a href={{product.refer}} [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+    <br>
+    <img src={{product.image}}>
+  </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+  <p *ngIf="product.price">Price: {{ product.price }}$</p>
+  <p *ngIf="product.rating">Rating: {{ product.rating }}/5</p>
+  
+  <form action="https://api.whatsapp.com/send/?phone&text={{product.refer}}">
+  <button type="submit">Share via WhatsApp</button>
+  </form>
+</div>
