@@ -4,12 +4,6 @@ let addButton = document.querySelector('.add');
 let todoList=[];
 
 let delButton = document.querySelector('.del');
-
-
-
-
-
-
 let todo= document.querySelector('.todo')
 
 
@@ -24,8 +18,11 @@ addButton.addEventListener('click',function(){
         
     };
     todoList.push(newTodo);
-    displayMessages();
     localStorage.setItem('todo',JSON.stringify(todoList));
+
+    localStorage.setItem('todo',JSON.stringify(todoList));
+
+
 });
 
 function displayMessages(){
@@ -56,8 +53,17 @@ todo.addEventListener('change',function(event){
             localStorage.setItem('todo',JSON.stringify(todoList));
         }
     })
+
 })
 
+
+let a = 2;
+
+if(a){
+    let a = 3;
+}
+
+console.log(a);
 
 // delButton.addEventListener('click',function(event){
 //     event.defaultPrevented();

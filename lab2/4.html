@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://127.0.0.1:5500/lab3/todolist2/todolist.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="./4_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <script src="./4_files/app.js.download"></script>
+  
+    <title>To Do List</title>
+</head>
+   
+<body>
+    <header class="bg-success text-white p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <font face="Comic sans MS" size="11" color="black">
+                        <strong>ToDo List</strong>
+                    </font>
+                       
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    <div class="container mt-3">
+        <h2>Add Items</h2>
+   
+        <label id="lblsuccess" class="text-success" style="display: none;">
+        </label>
+          
+        <form id="addForm">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+  
+                    <input type="text" onkeyup="toggleButton(this, &#39;submit&#39;)" class="form-control" id="item">
+                </div>
+  
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                  <input type="submit" class="btn btn-dark" id="submit" value="EDIT">
+                </div>
+            </div>
+        </form>
+   
+        <h3 class="mt-4">Tasks</h3>
+   
+        <form id="addForm">
+            <ul class="list-group" id="items"><li class="list-group-item">1555<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li><li class="list-group-item">hello<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li><li class="list-group-item">asdsadsa<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li><li class="list-group-item">qwed;leqwjrqwjfqrkefj<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li><li class="list-group-item">12312<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li><li class="list-group-item">3123123123<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li><li class="list-group-item">312312312<button class="btn-danger btn btn-sm float-right delete">Delete</button><button class="btn-success btn btn-sm float-right edit">Edit</button></li></ul>
+        </form>
+    </div>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+   
+</body></html>

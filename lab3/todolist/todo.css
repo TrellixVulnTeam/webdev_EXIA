@@ -76,6 +76,14 @@ body {
     margin-right: 10px;
     text-align: center; }
   
+  .res{
+    width: 0;
+    size: 0;
+    border: none;
+    background-color: transparent;
+    
+  }
+  
   input[type=checkbox]:checked + label:before {
     content: "";
     

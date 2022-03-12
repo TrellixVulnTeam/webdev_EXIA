@@ -13,7 +13,7 @@
   <p *ngIf="product.price">Price: {{ product.price }}$</p>
   <p *ngIf="product.rating">Rating: {{ product.rating }}/5</p>
   
-  <form action="https://api.whatsapp.com/send/?phone&text={{product.refer}}">
+  <a href="https://api.whatsapp.com/send/?phone&text={{product.refer}}">
   <button type="submit">Share via WhatsApp</button>
-  </form>
+  </a>
 </div>
