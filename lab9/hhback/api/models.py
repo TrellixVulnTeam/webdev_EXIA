@@ -11,6 +11,15 @@ class Company(models.Model):
     address = models.TextField()
     objects = models.Manager()
 
+    def __str__(self):
+        return f'{self.id}:{self.name}'
+
+
+    class Meta:
+        verbose_name = "Company"
+        verbose_name_plural = "Companies"
+
+
     def to_json(self):
         return {
             'id': self.id,
@@ -27,6 +36,15 @@ class Vacancy(models.Model):
     price = models.FloatField(default=0)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     objects = models.Manager()
+
+
+    def __str__(self):
+        return f'{self.id}:{self.name}'
+
+
+    class Meta:
+        verbose_name = "Vacancy"
+        verbose_name_plural = "Vacancies"
 
 
     def to_json(self):
